@@ -576,7 +576,7 @@ AmbiguousMatchException: The request matched multiple endpoints. Matches:
 
 <a name="routing-cust-rt-attr-irt-ref-label"></a>
 
-### <a name="custom-route-attributes-using-iroutetemplateprovider"></a>Настраиваемые атрибуты маршрута с помощью Ираутетемплатепровидер
+### <a name="custom-route-attributes-using-iroutetemplateprovider"></a>Настраиваемые атрибуты маршрута с помощью IRouteTemplateProvider
 
 Все [атрибуты маршрута](#rt) реализуют <xref:Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider> . Среда выполнения ASP.NET Core:
 
@@ -696,7 +696,7 @@ result: /UrlGeneration/Destination
 
 ### <a name="generating-urls-by-action-name"></a>Формирование URL-адресов по имени действия
 
-[URL. Action](xref:Microsoft.AspNetCore.Mvc.IUrlHelper.Action*), [линкженератор. жетпасбяктион](xref:Microsoft.AspNetCore.Routing.ControllerLinkGeneratorExtensions.GetPathByAction*)и все связанные перегрузки предназначены для создания целевой конечной точки путем указания имени контроллера и имени действия.
+[URL. Action](xref:Microsoft.AspNetCore.Mvc.IUrlHelper.Action*), [LinkGenerator. GetPathByAction](xref:Microsoft.AspNetCore.Routing.ControllerLinkGeneratorExtensions.GetPathByAction*)и все связанные перегрузки предназначены для создания целевой конечной точки путем указания имени контроллера и имени действия.
 
 При использовании `Url.Action` значения текущего маршрута для `controller` и `action` предоставляются средой выполнения:
 
@@ -738,7 +738,7 @@ result: /UrlGeneration/Destination
 Чтобы создать абсолютный URL-адрес, используйте один из следующих способов.
 
 * Перегрузка, принимающая `protocol` . Например, приведенный выше код.
-* [Линкженератор. жетурибяктион](xref:Microsoft.AspNetCore.Routing.ControllerLinkGeneratorExtensions.GetUriByAction*), который по умолчанию создает абсолютные URI.
+* [LinkGenerator. GetPathByAction](xref:Microsoft.AspNetCore.Routing.ControllerLinkGeneratorExtensions.GetUriByAction*), который по умолчанию создает абсолютные URI.
 
 <a name="routing-gen-urls-route-ref-label"></a>
 
@@ -759,7 +759,7 @@ result: /UrlGeneration/Destination
 
 ### <a name="generate-urls-in-html-and-no-locrazor"></a>Создание URL-адресов в HTML и Razor
 
-<xref:Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper> предоставляет <xref:Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper> методы [HTML. Бегинформ](xref:Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper.BeginForm*) и [HTML. ActionLink](xref:Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper.ActionLink*) для создания `<form>` элементов и `<a>` соответственно. Эти методы используют метод [URL. Action](xref:Microsoft.AspNetCore.Mvc.IUrlHelper.Action*) для создания URL-адреса и принимают аналогичные аргументы. Эквивалентами методов `Url.RouteUrl` для `HtmlHelper` являются методы `Html.BeginRouteForm` и `Html.RouteLink`, которые имеют схожие функции.
+<xref:Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper> предоставляет <xref:Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper> методы [HTML. BeginForm](xref:Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper.BeginForm*) и [HTML. ActionLink](xref:Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper.ActionLink*) для создания `<form>` элементов и `<a>` соответственно. Эти методы используют метод [URL. Action](xref:Microsoft.AspNetCore.Mvc.IUrlHelper.Action*) для создания URL-адреса и принимают аналогичные аргументы. Эквивалентами методов `Url.RouteUrl` для `HtmlHelper` являются методы `Html.BeginRouteForm` и `Html.RouteLink`, которые имеют схожие функции.
 
 Для формирования URL-адресов используются вспомогательные функции тегов `form` и `<a>`. Обе они реализуются с помощью интерфейса `IUrlHelper`. Дополнительные сведения см. [в разделе вспомогательные функции тегов в формах](xref:mvc/views/working-with-forms) .
 
